@@ -10,11 +10,10 @@ import modelo.ProductoMenu;
 
 
 public class CargaDeRestaurante{
-	public static ArrayList<ProductoMenu> leerInfoArchivoProductosMenu(String rutaArchivo) throws FileNotFoundException, IOException
+	public static ArrayList<ProductoMenu> leerInfoArchivoProductosMenu(String rutaArchivo)
 	{
 
 		ArrayList<ProductoMenu> productosMenu = new ArrayList<ProductoMenu>();
-		
 		BufferedReader br = new BufferedReader(new FileReader(rutaArchivo));
 		String linea = br.readLine();   
 		while (linea != null) 
@@ -30,7 +29,7 @@ public class CargaDeRestaurante{
 		return productosMenu;
 	}
 	
-	public static ArrayList<Combo> leerInfoArchivoCombos(String rutaArchivo, ArrayList<ProductoMenu> productosMenu) throws FileNotFoundException, IOException
+	public static ArrayList<Combo> leerInfoArchivoCombos(String rutaArchivo, ArrayList<ProductoMenu> productosMenu) 
 	{
 		
 		ArrayList<Combo> combos = new ArrayList<Combo>();
